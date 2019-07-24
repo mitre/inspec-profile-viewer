@@ -30,10 +30,6 @@
       "sections": ["Web Server"]
     },
     {
-      "name": "Docker EE STIG",
-      "sections": ["Containers"]
-    },
-    {
       "name": "Kubernetes CIS",
       "route": "cis-kubernetes-benchmark",
       "sections": ["Containers"]
@@ -96,6 +92,7 @@
     },
     {
       "name": "RHEL 6/7 STIG, CVE",
+      "route": "red-hat-enterprise-linux-6-stig-baseline",
       "sections": ["Operating Systems"]
     },
     {
@@ -119,10 +116,6 @@
       "sections": ["Network Components"]
     },
     {
-      "name": "Azure CIS",
-      "sections": ["Network Components"]
-    },
-    {
       "name": "AWS RDS Baseline",
       "route": "cis-aws-rds-infrastructure-baseline",
       "sections": ["Cloud Services"]
@@ -130,14 +123,6 @@
     {
       "name": "AWS S3",
       "route": "aws-s3-baseline",
-      "sections": ["Cloud Services"]
-    },
-    {
-      "name": "Azure CIS, Salesforce",
-      "sections": ["Cloud Services"]
-    },
-    {
-      "name": "DOD AWS STIG",
       "sections": ["Cloud Services"]
     }
   ]
