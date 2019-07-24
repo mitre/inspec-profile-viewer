@@ -77,8 +77,9 @@ import apache_tomcat_7 from "../assets/cis-apache-tomcat-benchmark7.json";
 import aws_oracle_microsoft_sql_cis from "../assets/cis-aws-rds-mysql-server-enterprise-v5.7-baseline.json";
 import microsoft_server_2016 from "../assets/stig-microsoft-windows-server-2016-v1r4-baseline.json";
 import aws_s3 from "../assets/aws-s3-baseline.json";
-import cis_kubernetes from "../assets/cis-kubernetes-benchmark.json"
-import aws_rds_infrastructure from "../assets/cis-aws-rds-infrastructure-baseline.json"
+import cis_kubernetes from "../assets/cis-kubernetes-benchmark.json";
+import aws_rds_infrastructure from "../assets/cis-aws-rds-infrastructure-baseline.json";
+import aws_oracle from "../assets/"aws-rds-oracle-mysql-ee-5.7-cis-baseline.json";
 
 export default {
   components: {
@@ -165,6 +166,9 @@ export default {
       if (this.$page.title == "cis-aws-rds-infrastructure-baseline"){
       return aws_rds_infrastructure.controls;
       }
+      if (this.$page.title == "aws-rds-oracle-mysql-ee-5.7-cis-baseline"){
+      return aws_oracle.controls;
+      }
       
 
 
@@ -247,6 +251,9 @@ export default {
       }
       if (this.$page.title == "cis-aws-rds-infrastructure-baseline"){
       return aws_rds_infrastructure;
+      }
+      if (this.$page.title == "aws-rds-oracle-mysql-ee-5.7-cis-baseline"){
+      return aws_oracle;
       }
      
      
