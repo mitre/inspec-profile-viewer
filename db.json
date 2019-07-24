@@ -75,10 +75,6 @@
       "sections": ["Database"]
     },
     {
-      "name": "Postgres STIG",
-      "sections": ["Database"]
-    },
-    {
       "name": "MSSQL",
       "route": "microsoft-sql-server-2014-database-stig-baseline",
       "sections": ["Database"]

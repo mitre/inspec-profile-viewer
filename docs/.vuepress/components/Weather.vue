@@ -1,8 +1,6 @@
 <template lang="html">
   <div>
 
-  <h1> {{this.$page.title}} </h1>
-
    <vs-table
      max-items="10"
      pagination
@@ -79,7 +77,7 @@ import microsoft_server_2016 from "../assets/stig-microsoft-windows-server-2016-
 import aws_s3 from "../assets/aws-s3-baseline.json";
 import cis_kubernetes from "../assets/cis-kubernetes-benchmark.json";
 import aws_rds_infrastructure from "../assets/cis-aws-rds-infrastructure-baseline.json";
-import aws_oracle from "../assets/"aws-rds-oracle-mysql-ee-5.7-cis-baseline.json";
+import aws_oracle from "../assets/aws-rds-oracle-mysql-ee-5.7-cis-baseline.json";
 
 export default {
   components: {
