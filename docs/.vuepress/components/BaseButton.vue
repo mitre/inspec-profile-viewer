@@ -1,28 +1,21 @@
 <template>
   <div>
    
- <button @click="reroute(); sharedData.selectedHistoryRow = this.route; this.sharedData.showModal = true" class="button">
+ <button @click="reroute" class="button">
       <slot></slot>
     </button>
   </div>
 </template>
 
 <script>
-import sharedData from "../observables/history.js";
 
 export default {
-  data: () => ({ sharedData }),
   props: {
-    name: {
-      type: String,
-      required: true
-    },
     route: String
   },
   methods: {
     reroute(event) {
       if (this.route == null) {
-        this.$router.push("/Baselines/");
         alert(
           "The specific route hasn't been found. You will be redirected to a list of the baselines."
         );
