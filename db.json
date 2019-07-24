@@ -43,10 +43,7 @@
       "route": "cis-docker-ce-baseline",
       "sections": ["Containers"]
     },
-    {
-      "name": "Apache WildFly",
-      "sections": ["Application Server"]
-    },
+  
     {
       "name": "JBoss STIG",
       "route": "wildfly-stig-baseline",
