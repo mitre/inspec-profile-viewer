@@ -3,6 +3,6 @@
 [InSpec Profile](https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline)			
 
 
-<Weather/>
+<Accordian/>
 
 

@@ -3,5 +3,5 @@
 [InSpec Profile](https://github.com/mitre/cis-kubernetes-benchmark)			
 
 
-<Weather/>
+<Accordian/>
 

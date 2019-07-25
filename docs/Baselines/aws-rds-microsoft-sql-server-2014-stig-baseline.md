@@ -2,6 +2,6 @@
 
 [InSpec Profile](https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline)			
 
-<Weather/>
+<Accordian/>
 
 

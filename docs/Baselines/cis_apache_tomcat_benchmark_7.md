@@ -3,5 +3,5 @@
 [InSpec Profile](https://github.com/mitre/cis_apache_tomcat_benchmark_7)			
 
 
-<Weather/>
+<Accordian/>
 

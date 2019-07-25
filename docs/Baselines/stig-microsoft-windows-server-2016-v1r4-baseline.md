@@ -4,5 +4,5 @@
  Chef Remediation Cookbook](https://github.com/mitre/chef-stig-windows-server-2016-v1r4-hardening)
 
 
-<Weather/>
+<Accordian/>
 

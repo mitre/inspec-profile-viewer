@@ -4,5 +4,5 @@
 [Chef Remediation Cookbook](https://github.com/mitre/chef-stig-mongodb-enterprise-advanced-hardening)
 
 
-<Weather/>
+<Accordian/>
 

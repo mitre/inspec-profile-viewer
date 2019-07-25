@@ -29,20 +29,21 @@ export default {
 
 <style scoped>
 .button {
-  background-color: #3377ff; /* Blue background */
+  background-color: #2362df;
   border: 1px solid blue; /* Blue border */
   color: white; /* White text */
   padding: 20px 20px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   font-size: 16px;
   display: inline-block;
-  height: 75px;
+  height: 70px;
+  width: 20vw;
 }
 .button:not(:last-child) {
   border-right: none; /* Prevent double borders */
 }
 /* Add a background color on hover */
 .button:hover {
-  background-color: #0044cc;
+  background-color: rgb(66, 80, 109);
 }
 </style>

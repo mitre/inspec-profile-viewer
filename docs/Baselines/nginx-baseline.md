@@ -4,5 +4,5 @@
 [Chef Remediation Cookbook](https://github.com/mitre/chef-nginx-hardening)
 
 
-<Weather/>
+<Accordian/>
 
