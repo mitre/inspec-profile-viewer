@@ -83,7 +83,7 @@
     {
       "name": "Oracle (AWS RDS)",
       "route": "aws-rds-oracle-mysql-ee-5.7-cis-baseline",
-      "path": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline"
+      "path": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline",
       "sections": ["Database"]
     },
     {
