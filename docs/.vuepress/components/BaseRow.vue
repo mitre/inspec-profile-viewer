@@ -38,13 +38,9 @@ export default {
 </script>
 
 <style scoped>
-th,
-td {
-  text-align: center;
-  vertical-align: middle;
-  border: none;
-}
+
 .box {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

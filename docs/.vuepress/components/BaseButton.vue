@@ -1,9 +1,9 @@
 <template>
   <div>
    
- <button @click="reroute" class="button">
+ <vs-button size="ls" @click="reroute" class="button">
       <slot></slot>
-    </button>
+    </vs-button>
   </div>
 </template>
 
@@ -28,16 +28,18 @@ export default {
 </script>
 
 <style scoped>
-.button {
-  background-color: #2362df;
+
+button {
+  background-color: red;
   border: 1px solid blue; /* Blue border */
   color: white; /* White text */
-  padding: 20px 20px; /* Some padding */
+  padding: 10px 10px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
   font-size: 16px;
   display: inline-block;
   height: 70px;
   width: 20vw;
+  margin: 5px;
 }
 .button:not(:last-child) {
   border-right: none; /* Prevent double borders */

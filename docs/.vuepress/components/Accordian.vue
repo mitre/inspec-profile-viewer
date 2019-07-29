@@ -1,21 +1,52 @@
 <template lang="html">
   <div>
 
+  <h1> sss{{this.$route.path}}</h1>
+  <h1> aaaa </h1>
+  <vs-button 
+  v-for="base in baselines"
+   v-if="base.path === path"
+   :name="base.name"
+   :route="base.route"
+   target :href="{url: base.github}">
+  Github
+  </vs-button>
+
+  <vs-button 
+  v-for="base in baselines"
+   v-if="base.path === path && base.chef_hardening !==undefined"
+   :name="base.name"
+   :route="base.route"
+   target :href="{url: base.chef_hardening}">
+    Chef Remediation Cookbook
+  </vs-button>
+
+   <vs-button 
+  v-for="base in baselines"
+   v-if="base.path === path && base.readme !==undefined"
+   :name="base.name"
+   :route="base.route"
+   target :href="{url: base.readme}">
+    README
+  </vs-button>
+
    <vs-table
      max-items="10"
      pagination
      search 
      :data="controls">
     <template slot="header">
+      <h3>{{profile.name}}</h3>
 
 </template>
       <template slot="thead">
+
   <vs-th id="a">Title</vs-th>
   <vs-th id="b" sort-key="impact">Impact</vs-th>
 </template>
 
       <template slot-scope="{data}">
-  <vs-tr :key="indextr" v-for="(tr, indextr) in data">
+  <vs-tr id="c" :key="indextr" v-for="(tr, indextr) in data">
     <vs-td id="b" :data="data[indextr].title">{{data[indextr].title}}</vs-td>
 
     <vs-td id="a" :data="data[indextr].impact">{{data[indextr].impact}}</vs-td>
@@ -76,8 +107,9 @@ import aws_oracle_microsoft_sql_cis from "../assets/cis-aws-rds-mysql-server-ent
 import microsoft_server_2016 from "../assets/stig-microsoft-windows-server-2016-v1r4-baseline.json";
 import aws_s3 from "../assets/aws-s3-baseline.json";
 import cis_kubernetes from "../assets/cis-kubernetes-benchmark.json";
-import aws_rds_infrastructure from "../assets/cis-aws-rds-infrastructure-baseline.json";
+import aws_rds_infrastructure from "../assets/cis-aws-rds-infrastructure-baseline.json"; 
 import aws_oracle from "../assets/aws-rds-oracle-mysql-ee-5.7-cis-baseline.json";
+import route from "../../db.json"
 
 export default {
   components: {
@@ -86,9 +118,9 @@ export default {
   computed: {
     controls() {
 
-      var title = this.$page.title;
+      var title = this.$route.path;
       switch(title) {
-      case 'nginx-baseline':
+      case '/Baselines/nginx-baseline.html':
         return nginx_profile.controls;
         break;
       case 'red-hat-enterprise-linux-6-stig-baseline':
@@ -103,7 +135,7 @@ export default {
       case 'microsoft-sql-server-2014-database-stig-baseline':
         return microsoft_sql_server_2014_database.controls;
         break;
-      case 'cis-apache-tomcat-benchmark-8':
+      case '/Baselines/cis-apache-tomcat-benchmark-8.html':
         return apache_tomcat_8.controls;
         break;
       case 'cis-aws-foundations-baseline':
@@ -115,10 +147,10 @@ export default {
       case 'microsoft-sql-server-2014-instance-stig-baseline':
         return microsoft_sql_server_2014_instance.controls;
         break;
-      case 'microsoft-iis-8.5-server-stig-baseline':
+      case '/Baselines/microsoft-iis-8.5-server-stig-baseline.html':
         return microsoft_iis_server_stig.controls;
         break;
-      case 'microsoft-iis-8.5-site-stig-baseline':
+      case '/Baselines/microsoft-iis-8.5-site-stig-baseline.html':
         return microsoft_iis_site_stig.controls;
         break;
       case 'Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline':
@@ -175,9 +207,9 @@ export default {
     },
     profile() {
       
-    var title = this.$page.title;
+    var title = this.$route.path;
       switch(title) {
-      case 'nginx-baseline':
+      case '/Baselines/nginx-baseline.html':
         return nginx_profile;
         break;
       case 'red-hat-enterprise-linux-6-stig-baseline':
@@ -192,7 +224,7 @@ export default {
       case 'microsoft-sql-server-2014-database-stig-baseline':
         return microsoft_sql_server_2014_database;
         break;
-      case 'cis-apache-tomcat-benchmark-8':
+      case '/Baselines/cis-apache-tomcat-benchmark-8.html':
         return apache_tomcat_8;
         break;
       case 'cis-aws-foundations-baseline':
@@ -204,10 +236,10 @@ export default {
       case 'microsoft-sql-server-2014-instance-stig-baseline':
         return microsoft_sql_server_2014_instance;
         break;
-      case 'microsoft-iis-8.5-server-stig-baseline':
+      case '/Baselines/microsoft-iis-8.5-server-stig-baseline.html':
         return microsoft_iis_server_stig;
         break;
-      case 'microsoft-iis-8.5-site-stig-baseline':
+      case '/Baselines/microsoft-iis-8.5-site-stig-baseline.html':
         return microsoft_iis_site_stig;
         break;
       case 'Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline':
@@ -260,8 +292,13 @@ export default {
         return;
       default:
       break;
-      } 
-      
+      }  
+    },
+    baselines() {
+    return route.baselines;
+    },
+    names() {
+    return this.baselines.name;
     },
     showModal() {
       return sharedData.showModal;
@@ -274,6 +311,9 @@ export default {
     },
     file(){
     return "../assets/" + this.$page.title + '.json'
+    },
+    path(){
+    return this.$route.path;
     }
   }
 };
@@ -282,7 +322,7 @@ export default {
 th#a {
   background-color: black;
   color: white;
-  width: 30446666666888888999999px;
+  width: 550px;
   font-size: 0.8em;
   letter-spacing: 3px;
   font-weight: bold;
@@ -294,6 +334,7 @@ th#b {
   font-size: 0.8em;
   letter-spacing: 3px;
   font-weight: bold;
+   width: 10px;
 }
 tr {
   page-break-inside: avoid;
@@ -304,24 +345,23 @@ tr {
   display: block;
   word-wrap: break-word;
   text-align: left;
-  scolor: black;
-}
-tr#a {
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: auto 6em;
   color: black;
+  
 }
 
-td#a {
-  color: black;
-  text-alight: left;
+
+tr#c {
   background: white;
+
+
+
+
 }
 
 td#b {
   color: black;
-  width: 200%;
+  width: 518px;
+  background: white;
 }
 td#c {
   background: #444;
@@ -339,6 +379,7 @@ tr#d {
   padding: 2px 10px 3px 10px;
   border-radius: 1em;
   margin: 1.5em 0;
+
 }
 
 </style>

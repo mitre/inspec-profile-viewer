@@ -3,6 +3,7 @@
     <h1 align="center">Framework Baselines</h1>
     <br>
     <BaseRow v-for="section in sections" :section="section" :baselines="baselines"></BaseRow>
+
   </div>
  
 </template>
@@ -45,4 +46,5 @@ table {
   border: 1px solid #CCC;
   border-collapse: collapse;
 }
+
 </style>
