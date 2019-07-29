@@ -1,7 +1,7 @@
 <template lang="html">
   <div>
 
-  
+  <h1> aaaa </h1>
   <vs-button 
   v-for="base in baselines"
    v-if="base.path === path"
@@ -161,7 +161,7 @@ export default {
       case 'cis-docker-community-edition-baseline':
         return cis_docker.controls;
         break;
-      case 'red-hat-jboss-eap-6.3-stig-baseline':
+      case 'Baselines/wildfly-stig-baseline.html':
         return jboss_profile.controls;
         break;
       case 'oracle-java-runtime-environment-8-unix-stig-baseline':
@@ -250,7 +250,7 @@ export default {
       case 'cis-docker-community-edition-baseline':
         return cis_docker;
         break;
-      case 'red-hat-jboss-eap-6.3-stig-baseline':
+      case 'Baselines/wildfly-stig-baseline.html':
         return jboss_profile;
         break;
       case 'oracle-java-runtime-environment-8-unix-stig-baseline':

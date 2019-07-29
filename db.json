@@ -31,7 +31,9 @@
       "name": "Apache Tomcat",
       "route": "cis-apache-tomcat-benchmark-8/",
       "path": "/Baselines/cis-apache-tomcat-benchmark-8.html",
-      "sections": ["Web Server"]
+      "sections": ["Web Server"],
+      "github":["https://github.com/mitre/apache-tomcat-8-cis-baseline"],
+      "readme":["https://github.com/mitre/apache-tomcat-8-cis-baseline/blob/master/README.md"]
     },
     {
       "name": "Docker EE STIG",
@@ -50,6 +52,7 @@
     {
       "name": "JBoss STIG",
       "route": "wildfly-stig-baseline/",
+      "path": "/Baselines/wildfly-stig-baseline.html",
       "sections": ["Application Server"]
     },
     {
