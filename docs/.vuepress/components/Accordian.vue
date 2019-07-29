@@ -1,8 +1,7 @@
 <template lang="html">
   <div>
 
-  <h1> sss{{this.$route.path}}</h1>
-  <h1> aaaa </h1>
+  
   <vs-button 
   v-for="base in baselines"
    v-if="base.path === path"

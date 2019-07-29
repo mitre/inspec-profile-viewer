@@ -9,6 +9,7 @@ module.exports = {
       { text: "Baselines", link: "/Baselines/" },
       { text: "GitHub", link: "https://github.com/mitre" }
     ],
-    search: false
+    search: false,
+    sidebar: false
   }
 };
