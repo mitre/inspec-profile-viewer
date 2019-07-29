@@ -53,25 +53,37 @@
       "name": "JBoss STIG",
       "route": "wildfly-stig-baseline/",
       "path": "/Baselines/wildfly-stig-baseline.html",
-      "sections": ["Application Server"]
+      "sections": ["Application Server"],
+      "github":["https://github.com/mitre/red-hat-jboss-eap-6.3-stig-baseline"],
+      "readme":["https://github.com/mitre/red-hat-jboss-eap-6.3-stig-baseline/blob/master/README.md"]
     },
     {
       "name": "RSA Archer",
       "route": "rsa-archer-6-security-configuration-guide-baseline/",
-      "sections": ["Application Server"]
+      "sections": ["Application Server"],
+      "github":["https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline"],
+      "readme":["https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline/blob/master/README.md"]
     },
     {
       "name": "Postgres (AWS RDS)",
       "route": "aws-rds-postgres-9-stig-baseline/",
-      "sections": ["Database"]
+      "path": "/Baselines/aws-rds-postgres-9-stig-baseline.html",
+      "sections": ["Database"],
+      "github":["https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline"],
+      "readme":["https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline/blob/master/README.md"]
     },
     {
       "name": "MSSQL (AWS RDS)",
       "route": "aws-rds-microsoft-sql-server-2014-stig-baseline/",
-      "sections": ["Database"]
+      "path": "/Baselines/aws-rds-microsoft-sql-server-2014-stig-baseline.html",
+      "sections": ["Database"],
+      "github":["https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline"],
+      "readme":["https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline/blob/master/README.md"]
     },
     {
       "name": "Oracle (AWS RDS)",
+      "route": "aws-rds-oracle-mysql-ee-5.7-cis-baseline",
+      "path": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline"
       "sections": ["Database"]
     },
     {

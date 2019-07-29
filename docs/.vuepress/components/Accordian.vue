@@ -1,10 +1,10 @@
 <template lang="html">
   <div>
 
-  <h1> aaaa </h1>
+  <h1> {{path}} </h1>
   <vs-button 
   v-for="base in baselines"
-   v-if="base.path === path"
+   v-if="base.path === path  && base.github !==undefined"
    :name="base.name"
    :route="base.route"
    target :href="{url: base.github}">
@@ -128,7 +128,7 @@ export default {
       case 'oracle-database-12c-stig-baseline':
         return oracle12c_stig.controls;
         break;
-      case 'rsa-archer-6-security-configuration-guide-baseline':
+      case '/Baselines/rsa-archer-6-security-configuration-guide-baseline.html':
         return rsa_archer6.controls;
         break;
       case 'microsoft-sql-server-2014-database-stig-baseline':
@@ -155,13 +155,13 @@ export default {
       case 'Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline':
         return oracle_microsoft_sql_cis.controls;
         break;
-      case 'aws-rds-microsoft-sql-server-2014-stig-baseline':
+      case '/Baselines/aws-rds-microsoft-sql-server-2014-stig-baseline.html':
         return aws_rds_microsoft_sql_server_2014_stig.controls;
         break;
       case 'cis-docker-community-edition-baseline':
         return cis_docker.controls;
         break;
-      case 'Baselines/wildfly-stig-baseline.html':
+      case '/Baselines/wildfly-stig-baseline.html':
         return jboss_profile.controls;
         break;
       case 'oracle-java-runtime-environment-8-unix-stig-baseline':
@@ -170,7 +170,7 @@ export default {
       case 'oracle-java-runtime-environment-7-unix-stig-baseline':
         return jre7.controls;
         break;
-      case 'aws-rds-postgres-9-stig-baseline':
+      case '/Baselines/aws-rds-postgres-9-stig-baseline.html':
         return aws_rds_postgres_stig.controls;
         break;
       case 'microsoft-windows-2012r2-memberserver-stig-baseline':
@@ -217,7 +217,7 @@ export default {
       case 'oracle-database-12c-stig-baseline':
         return oracle12c_stig;
         break;
-      case 'rsa-archer-6-security-configuration-guide-baseline':
+      case '/Baselines/rsa-archer-6-security-configuration-guide-baseline.html':
         return rsa_archer6;
         break;
       case 'microsoft-sql-server-2014-database-stig-baseline':
@@ -244,13 +244,13 @@ export default {
       case 'Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline':
         return oracle_microsoft_sql_cis;
         break;
-      case 'aws-rds-microsoft-sql-server-2014-stig-baseline':
+      case '/Baselines/aws-rds-microsoft-sql-server-2014-stig-baseline.html':
         return aws_rds_microsoft_sql_server_2014_stig;
         break;
       case 'cis-docker-community-edition-baseline':
         return cis_docker;
         break;
-      case 'Baselines/wildfly-stig-baseline.html':
+      case '/Baselines/wildfly-stig-baseline.html':
         return jboss_profile;
         break;
       case 'oracle-java-runtime-environment-8-unix-stig-baseline':
@@ -259,7 +259,7 @@ export default {
       case 'oracle-java-runtime-environment-7-unix-stig-baseline':
         return jre7;
         break;
-      case 'aws-rds-postgres-9-stig-baseline':
+      case '/Baselines/aws-rds-postgres-9-stig-baseline.html':
         return aws_rds_postgres_stig;
         break;
       case 'microsoft-windows-2012r2-memberserver-stig-baseline':
