@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
 
-  <h1> {{path}} </h1>
   <vs-button 
   v-for="base in baselines"
    v-if="base.path === path  && base.github !==undefined"
@@ -22,12 +21,31 @@
 
    <vs-button 
   v-for="base in baselines"
+   v-if="base.path === path && base.ansible !==undefined"
+   :name="base.name"
+   :route="base.route"
+   target :href="{url: base.ansible}">
+    Ansible Remediation Role
+  </vs-button>
+
+   <vs-button 
+  v-for="base in baselines"
+   v-if="base.path === path && base.terraform !==undefined"
+   :name="base.name"
+   :route="base.route"
+   target :href="{url: base.terraform}">
+    Terraform Remediation
+  </vs-button>
+
+   <vs-button 
+  v-for="base in baselines"
    v-if="base.path === path && base.readme !==undefined"
    :name="base.name"
    :route="base.route"
    target :href="{url: base.readme}">
     README
   </vs-button>
+
 
    <vs-table
      max-items="10"
@@ -102,7 +120,6 @@ import aws_rds_postgres_stig from "../assets/aws-rds-postgres-9-stig-baseline.js
 import microsoft_server_2012r2 from "../assets/microsoft-windows-2012r2-memberserver-stig-baseline.json";
 import mongodb_stig from "../assets/mongodb-enterprise-advanced-stig-baseline.json";
 import apache_tomcat_7 from "../assets/cis-apache-tomcat-benchmark7.json";
-import aws_oracle_microsoft_sql_cis from "../assets/cis-aws-rds-mysql-server-enterprise-v5.7-baseline.json";
 import microsoft_server_2016 from "../assets/stig-microsoft-windows-server-2016-v1r4-baseline.json";
 import aws_s3 from "../assets/aws-s3-baseline.json";
 import cis_kubernetes from "../assets/cis-kubernetes-benchmark.json";
@@ -122,28 +139,28 @@ export default {
       case '/Baselines/nginx-baseline.html':
         return nginx_profile.controls;
         break;
-      case 'red-hat-enterprise-linux-6-stig-baseline':
+      case '/Baselines/red-hat-enterprise-linux-6-stig-baseline.html':
         return redhat6_stig.controls;
         break;
-      case 'oracle-database-12c-stig-baseline':
+      case '/Baselines/oracle-database-12c-stig-baseline.html':
         return oracle12c_stig.controls;
         break;
       case '/Baselines/rsa-archer-6-security-configuration-guide-baseline.html':
         return rsa_archer6.controls;
         break;
-      case 'microsoft-sql-server-2014-database-stig-baseline':
+      case '/Baselines/microsoft-sql-server-2014-database-stig-baseline.html':
         return microsoft_sql_server_2014_database.controls;
         break;
       case '/Baselines/cis-apache-tomcat-benchmark-8.html':
         return apache_tomcat_8.controls;
         break;
-      case 'cis-aws-foundations-baseline':
+      case '/Baselines/cis-aws-foundations-baseline.html':
         return cis_aws_foundations.controls;
         break;
-      case 'stig-canonical-ubuntu-16.04-lts-baseline':
+      case '/Baselines/stig-canonical-ubuntu-16.04-lts-baseline.html':
         return ubuntu_stig.controls;
         break;
-      case 'microsoft-sql-server-2014-instance-stig-baseline':
+      case '/Baselines/microsoft-sql-server-2014-instance-stig-baseline.html':
         return microsoft_sql_server_2014_instance.controls;
         break;
       case '/Baselines/microsoft-iis-8.5-server-stig-baseline.html':
@@ -152,13 +169,13 @@ export default {
       case '/Baselines/microsoft-iis-8.5-site-stig-baseline.html':
         return microsoft_iis_site_stig.controls;
         break;
-      case 'Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline':
+      case '/Baselines/Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline.html':
         return oracle_microsoft_sql_cis.controls;
         break;
       case '/Baselines/aws-rds-microsoft-sql-server-2014-stig-baseline.html':
         return aws_rds_microsoft_sql_server_2014_stig.controls;
         break;
-      case 'cis-docker-community-edition-baseline':
+      case '/Baselines/cis-docker-ce-baseline.html':
         return cis_docker.controls;
         break;
       case '/Baselines/wildfly-stig-baseline.html':
@@ -173,31 +190,28 @@ export default {
       case '/Baselines/aws-rds-postgres-9-stig-baseline.html':
         return aws_rds_postgres_stig.controls;
         break;
-      case 'microsoft-windows-2012r2-memberserver-stig-baseline':
+      case '/Baselines/microsoft-windows-2012r2-memberserver-stig-baseline.html':
         return microsoft_server_2012r2.controls;
         break;
-      case 'mongodb-enterprise-advanced-stig-baseline':
+      case '/Baselines/mongodb-enterprise-advanced-stig-baseline.html':
         return mongodb_stig.controls;
         break;
       case 'cis-apache-tomcat-benchmark-7':
         return apache_tomcat_7.controls;
         break;
-      case 'cis-aws-rds-mysql-server-enterprise-v5.7-baseline':
-        return aws_oracle_microsoft_sql_cis.controls;
-        break;
-      case 'stig-microsoft-windows-server-2016-v1r4-baseline':
+      case '/Baselines/stig-microsoft-windows-server-2016-v1r4-baseline.html':
         return microsoft_server_2016.controls;
         break;
-      case 'aws-s3-baseline':
+      case '/Baselines/aws-s3-baseline.html':
         return aws_s3.controls;
         break;
-      case 'cis-kubernetes-benchmark':
+      case '/Baselines/cis-kubernetes-benchmark.html':
         return cis_kubernetes.controls;
         break;
-      case 'cis-aws-rds-infrastructure-baseline':
+      case '/Baselines/cis-aws-rds-infrastructure-baseline.html':
         return aws_rds_infrastructure.controls;
         break;
-      case 'aws-rds-oracle-mysql-ee-5.7-cis-baseline':
+      case '/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline.html':
         return aws_oracle.controls;
         return;
       default:
@@ -211,28 +225,28 @@ export default {
       case '/Baselines/nginx-baseline.html':
         return nginx_profile;
         break;
-      case 'red-hat-enterprise-linux-6-stig-baseline':
+      case '/Baselines/red-hat-enterprise-linux-6-stig-baseline.html':
         return redhat6_stig;
         break;
-      case 'oracle-database-12c-stig-baseline':
+      case '/Baselines/oracle-database-12c-stig-baseline.html':
         return oracle12c_stig;
         break;
       case '/Baselines/rsa-archer-6-security-configuration-guide-baseline.html':
         return rsa_archer6;
         break;
-      case 'microsoft-sql-server-2014-database-stig-baseline':
+      case '/Baselines/microsoft-sql-server-2014-database-stig-baseline.html':
         return microsoft_sql_server_2014_database;
         break;
       case '/Baselines/cis-apache-tomcat-benchmark-8.html':
         return apache_tomcat_8;
         break;
-      case 'cis-aws-foundations-baseline':
+      case '/Baselines/cis-aws-foundations-baseline.html':
         return cis_aws_foundations;
         break;
-      case 'stig-canonical-ubuntu-16.04-lts-baseline':
+      case '/Baselines/stig-canonical-ubuntu-16.04-lts-baseline.html':
         return ubuntu_stig;
         break;
-      case 'microsoft-sql-server-2014-instance-stig-baseline':
+      case '/Baselines/microsoft-sql-server-2014-instance-stig-baseline.html':
         return microsoft_sql_server_2014_instance;
         break;
       case '/Baselines/microsoft-iis-8.5-server-stig-baseline.html':
@@ -241,13 +255,10 @@ export default {
       case '/Baselines/microsoft-iis-8.5-site-stig-baseline.html':
         return microsoft_iis_site_stig;
         break;
-      case 'Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline':
-        return oracle_microsoft_sql_cis;
-        break;
       case '/Baselines/aws-rds-microsoft-sql-server-2014-stig-baseline.html':
         return aws_rds_microsoft_sql_server_2014_stig;
         break;
-      case 'cis-docker-community-edition-baseline':
+      case '/Baselines/cis-docker-ce-baseline.html':
         return cis_docker;
         break;
       case '/Baselines/wildfly-stig-baseline.html':
@@ -262,33 +273,33 @@ export default {
       case '/Baselines/aws-rds-postgres-9-stig-baseline.html':
         return aws_rds_postgres_stig;
         break;
-      case 'microsoft-windows-2012r2-memberserver-stig-baseline':
+      case '/Baselines/microsoft-windows-2012r2-memberserver-stig-baseline.html':
         return microsoft_server_2012r2;
         break;
-      case 'mongodb-enterprise-advanced-stig-baseline':
+      case '/Baselines/mongodb-enterprise-advanced-stig-baseline.html':
         return mongodb_stig;
         break;
       case 'cis-apache-tomcat-benchmark-7':
         return apache_tomcat_7;
         break;
-      case 'cis-aws-rds-mysql-server-enterprise-v5.7-baseline':
-        return aws_oracle_microsoft_sql_cis;
-        break;
-      case 'stig-microsoft-windows-server-2016-v1r4-baseline':
+      case '/Baselines/stig-microsoft-windows-server-2016-v1r4-baseline.html':
         return microsoft_server_2016;
         break;
-      case 'aws-s3-baseline':
+      case '/Baselines/aws-s3-baseline.html':
         return aws_s3;
         break;
-      case 'cis-kubernetes-benchmark':
+      case '/Baselines/cis-kubernetes-benchmark.html':
         return cis_kubernetes;
         break;
-      case 'cis-aws-rds-infrastructure-baseline':
+      case '/Baselines/cis-aws-rds-infrastructure-baseline.html':
         return aws_rds_infrastructure;
         break;
-      case 'aws-rds-oracle-mysql-ee-5.7-cis-baseline':
+      case '/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline.html':
         return aws_oracle;
-        return;
+        break;
+      case '/Baselines/Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline.html':
+        return oracle_microsoft_sql_cis;
+        break;
       default:
       break;
       }  
