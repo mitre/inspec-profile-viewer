@@ -12,10 +12,10 @@
 
   <vs-button 
   v-for="base in baselines"
-   v-if="base.path === path && base.chef_hardening !==undefined"
+   v-if="base.path === path && base.chef !==undefined"
    :name="base.name"
    :route="base.route"
-   target :href="{url: base.chef_hardening}">
+   target :href="{url: base.chef}">
     Chef Remediation Cookbook
   </vs-button>
 
