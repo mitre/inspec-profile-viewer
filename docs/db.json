@@ -57,6 +57,7 @@
     {
       "name": "RSA Archer",
       "route": "rsa-archer-6-security-configuration-guide-baseline/",
+      "path": "/Baselines/rsa-archer-6-security-configuration-guide-baseline.html",
       "sections": "Application Server",
       "github":"https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline"
     },
@@ -77,7 +78,7 @@
     {
       "name": "Oracle (AWS RDS)",
       "route": "aws-rds-oracle-mysql-ee-5.7-cis-baseline",
-      "path": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline",
+      "path": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline.html",
       "sections": "Database",
       "github":"https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline"
     },
@@ -136,7 +137,7 @@
     {
       "name": "Windows 2012 STIG",
       "route": "microsoft-windows-2012r2-memberserver-stig-baseline/",
-      "path:": "/Baselines/microsoft-windows-2012r2-memberserver-stig-baseline.html",
+      "path": "/Baselines/microsoft-windows-2012r2-memberserver-stig-baseline.html",
       "sections": "Operating Systems",
       "github":"https://github.com/mitre/microsoft-windows-2012r2-memberserver-stig-baseline",
       "chef":"https://github.com/mitre/chef-stig-windows-2012-v2r12-memberserver-hardening"
