@@ -51,6 +51,7 @@
      max-items="10"
      pagination
      search 
+     maxHeight="500px"
      :data="controls">
     <template slot="header">
       <h3>{{profile.name}}</h3>
@@ -332,7 +333,7 @@ export default {
 th#a {
   background-color: black;
   color: white;
-  width: 550px;
+  width: 9999px;
   font-size: 0.8em;
   letter-spacing: 3px;
   font-weight: bold;
@@ -340,15 +341,13 @@ th#a {
 th#b {
   background-color: black;
   color: white;
-  width: 10px;
+  width: 150px;
   font-size: 0.8em;
   letter-spacing: 3px;
   font-weight: bold;
-   width: 10px;
 }
 tr {
   page-break-inside: avoid;
-  font-size: 15px;
   line-height: 1.6;
   max-width: 100%;
   overflow: auto;
@@ -362,17 +361,26 @@ tr {
 
 tr#c {
   background: white;
+}
 
-
-
-
+tr#a {
+  word-wrap: break-word;
 }
 
 td#b {
   color: black;
-  width: 518px;
+  width: 600px;
   background: white;
+  word-wrap: break-word;
 }
+
+td#a {
+  color: black;
+  width: 95px;
+  background: white;
+  word-wrap: break-word;
+}
+
 td#c {
   background: #444;
   color: white;

@@ -10,6 +10,13 @@ module.exports = {
       { text: "GitHub", link: "https://github.com/mitre" }
     ],
     search: false,
-    sidebar: false
-  }
+    sidebar: false,
+     extend: '@vuepress/theme-default'
+  },
+   postcss: {
+      plugins: [require('tailwindcss')('./tailwind.js'), require('autoprefixer')],
+    },
+    title: 'Hello VuePress',
+    description: 'Just playing around'
+  
 };

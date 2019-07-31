@@ -4,206 +4,181 @@
       "name": "MSIIS Server",
       "route": "microsoft-iis-8.5-server-stig-baseline",
       "path": "/Baselines/microsoft-iis-8.5-server-stig-baseline.html",
-      "sections": ["Web Server"],
-      "github":["https://github.com/mitre/microsoft-iis-8.5-server-stig-baseline"],
-      "chef_hardening":["https://github.com/mitre/chef-iis-85-hardening"],
-      "readme":["https://github.com/mitre/microsoft-iis-8.5-server-stig-baseline/blob/master/README.md"]
+      "sections": "Web Server",
+      "github":"https://github.com/mitre/microsoft-iis-8.5-server-stig-baseline",
+      "chef":"https://github.com/mitre/chef-iis-85-hardening"
     },
     {
       "name": "MSIIS Site",
       "route": "microsoft-iis-8.5-site-stig-baseline/",
       "path": "/Baselines/microsoft-iis-8.5-site-stig-baseline.html",
-      "sections": ["Web Server"],
-      "github":["https://github.com/mitre/microsoft-iis-8.5-site-stig-baseline"],
-      "chef_hardening":["https://github.com/mitre/chef-iis-site-hardening"],
-      "readme":["https://github.com/mitre/microsoft-iis-8.5-site-stig-baseline/blob/master/README.md"] 
+      "sections": "Web Server",
+      "github":"https://github.com/mitre/microsoft-iis-8.5-site-stig-baseline",
+      "chef":"https://github.com/mitre/chef-iis-site-hardening"
     },
     {
       "name": "NGINX",
       "route": "nginx-baseline/",
       "path": "/Baselines/nginx-baseline.html",
-      "sections": ["Web Server"],
-      "github":["https://github.com/mitre/nginx-baseline"],
-      "chef_hardening":["https://github.com/mitre/chef-nginx-hardening"],
-      "readme":["https://github.com/mitre/nginx-baseline/blob/master/README.md"]
+      "sections": "Web Server",
+      "github":"https://github.com/mitre/nginx-baseline",
+      "chef":"https://github.com/mitre/chef-nginx-hardening"
     },
     {
       "name": "Apache Tomcat",
       "route": "cis-apache-tomcat-benchmark-8/",
       "path": "/Baselines/cis-apache-tomcat-benchmark-8.html",
-      "sections": ["Web Server"],
-      "github":["https://github.com/mitre/apache-tomcat-8-cis-baseline"],
-      "readme":["https://github.com/mitre/apache-tomcat-8-cis-baseline/blob/master/README.md"]
+      "sections": "Web Server",
+      "github":"https://github.com/mitre/apache-tomcat-8-cis-baseline"
     },
     {
       "name": "Kubernetes CIS",
       "route": "cis-kubernetes-benchmark/",
       "path": "/Baselines/cis-kubernetes-benchmark.html",
-      "sections": ["Containers"],
-      "github":["https://github.com/mitre/cis-kubernetes-benchmark"],
-      "readme":["https://github.com/mitre/cis-kubernetes-benchmark/blob/master/README.md"]
+      "sections": "Containers",
+      "github":"https://github.com/mitre/cis-kubernetes-benchmark"
     },
     {
       "name": "Docker CIS Benchmark",
       "route": "cis-docker-ce-baseline/",
       "path": "/Baselines/cis-docker-ce-baseline.html",
-      "sections": ["Containers"],
-      "github":["https://github.com/mitre/docker-ce-cis-baseline"],
-      "chef_hardening":"https://github.com/mitre/chef-cis-docker-ce-hardening",
-      "ansible": "https://github.com/mitre/ansible-cis-docker-ce-hardening",
-      "readme":["https://github.com/mitre/docker-ce-cis-baseline/blob/master/README.md"]
+      "sections": "Containers",
+      "github":"https://github.com/mitre/docker-ce-cis-baseline",
+      "chef":"https://github.com/mitre/chef-cis-docker-ce-hardening",
+      "ansible": "https://github.com/mitre/ansible-cis-docker-ce-hardening"
     },
     {
       "name": "JBoss STIG",
       "route": "wildfly-stig-baseline/",
       "path": "/Baselines/wildfly-stig-baseline.html",
-      "sections": ["Application Server"],
-      "github":["https://github.com/mitre/red-hat-jboss-eap-6.3-stig-baseline"],
-      "readme":["https://github.com/mitre/red-hat-jboss-eap-6.3-stig-baseline/blob/master/README.md"]
+      "sections": "Application Server",
+      "github":"https://github.com/mitre/red-hat-jboss-eap-6.3-stig-baseline"
     },
     {
       "name": "RSA Archer",
       "route": "rsa-archer-6-security-configuration-guide-baseline/",
-      "sections": ["Application Server"],
-      "github":["https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline"],
-      "readme":["https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline/blob/master/README.md"]
+      "sections": "Application Server",
+      "github":"https://github.com/mitre/rsa-archer-6-security-configuration-guide-baseline"
     },
     {
       "name": "Postgres (AWS RDS)",
       "route": "aws-rds-postgres-9-stig-baseline/",
       "path": "/Baselines/aws-rds-postgres-9-stig-baseline.html",
-      "sections": ["Database"],
-      "github":["https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline"],
-      "readme":["https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline/blob/master/README.md"]
+      "sections": "Database",
+      "github":"https://github.com/mitre/aws-rds-crunchy-data-postgresql-9-stig-baseline"
     },
     {
       "name": "MSSQL (AWS RDS)",
       "route": "aws-rds-microsoft-sql-server-2014-stig-baseline/",
       "path": "/Baselines/aws-rds-microsoft-sql-server-2014-stig-baseline.html",
-      "sections": ["Database"],
-      "github":["https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline"],
-      "readme":["https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline/blob/master/README.md"]
+      "sections": "Database",
+      "github":"https://github.com/mitre/aws-rds-microsoft-sql-server-2014-instance-stig-baseline"
     },
     {
       "name": "Oracle (AWS RDS)",
       "route": "aws-rds-oracle-mysql-ee-5.7-cis-baseline",
       "path": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline",
-      "sections": ["Database"],
-      "github":["https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline"],
-      "readme":["https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baselineblob/master/README.md"]
-    },
+      "sections": "Database",
+      "github":"https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline"
     },
     {
       "name": "MySQL (AWS RDS)",
       "route": "cis-aws-rds-mysql-server-enterprise-v5.7-baseline/",
       "path": "/Baselines/cis-aws-rds-mysql-server-enterprise-v5.7-baseline.html",
-      "sections": ["Database"],
-      "github": "https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline",
-      "readme": "https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline/blob/master/README.md"
+      "sections": "Database",
+      "github": "https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline"
     },
     {
       "name": "MSSQL Database",
       "route": "microsoft-sql-server-2014-database-stig-baseline/",
       "path": "/Baselines/microsoft-sql-server-2014-database-stig-baseline.html",
-      "sections": ["Database"],
-      "github": "https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline",
-      "readme": "https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline/blob/master/README.md"
+      "sections": "Database",
+      "github": "https://github.com/mitre/microsoft-sql-server-2014-database-stig-baseline"
     },
     {
       "name": "MSSQL Instance",
       "route": "microsoft-sql-server-2014-instance-stig-baseline/",
       "path": "/Baselines/microsoft-sql-server-2014-instance-stig-baseline.html",
-      "sections": ["Database"],
-      "github": "https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline",
-      "readme": "https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline/blob/master/README.md"
+      "sections": "Database",
+      "github": "https://github.com/mitre/microsoft-sql-server-2014-instance-stig-baseline"
     },
     {
       "name": "MongoDB",
       "route": "mongodb-enterprise-advanced-stig-baseline/",
       "path": "/Baselines/mongodb-enterprise-advanced-stig-baseline.html",
-      "sections": ["Database"],
-      "github":["https://github.com/mitre/mongodb-enterprise-advanced-3-stig-baseline"],
-      "chef_hardening":["https://github.com/mitre/chef-stig-mongodb-enterprise-advanced-hardening"],
-      "readme":["https://github.com/mitre/mongodb-enterprise-advanced-3-stig-baseline/blob/master/README.md"] 
+      "sections": "Database",
+      "github":"https://github.com/mitre/mongodb-enterprise-advanced-3-stig-baseline",
+      "chef":"https://github.com/mitre/chef-stig-mongodb-enterprise-advanced-hardening"
     },
     {
       "name": "Oracle DB",
       "route": "oracle-database-12c-stig-baseline/",
       "path": "/Baselines/oracle-database-12c-stig-baseline.html",
-      "sections": ["Database"],
-      "github": "https://github.com/mitre/oracle-database-12c-stig-baseline",
-      "readme": "https://github.com/mitre/oracle-database-12c-stig-baseline/blob/master/README.md"
+      "sections": "Database",
+      "github": "https://github.com/mitre/oracle-database-12c-stig-baseline"
 
     },
     {
       "name": "MySQL",
       "route": "Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline/",
       "path": "/Baselines/Oracle-MySQL-Enterprise-Edition-5.7-cis-baseline.html",
-      "sections": ["Database"],
-      "github": "https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline",
-      "readme": "https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline/blob/master/README.md"
+      "sections": "Database",
+      "github": "https://github.com/mitre/oracle-mysql-ee-5.7-cis-baseline"
     },
     {
       "name": "RHEL 6/7 STIG, CVE",
       "route": "red-hat-enterprise-linux-6-stig-baseline",
       "path": "/Baselines/red-hat-enterprise-linux-6-stig-baseline.html",
-      "sections": ["Operating Systems"],
-      "github": "https://github.com/mitre/red-hat-enterprise-linux-6-stig-baseline",
-      "readme": "https://github.com/mitre/red-hat-enterprise-linux-6-stig-baseline/blob/master/README.md"
+      "sections": "Operating Systems",
+      "github": "https://github.com/mitre/red-hat-enterprise-linux-6-stig-baseline"
 
     },
     {
       "name": "Windows 2012 STIG",
       "route": "microsoft-windows-2012r2-memberserver-stig-baseline/",
       "path:": "/Baselines/microsoft-windows-2012r2-memberserver-stig-baseline.html",
-      "sections": ["Operating Systems"],
-      "github":["https://github.com/mitre/microsoft-windows-2012r2-memberserver-stig-baseline"],
-      "chef_hardening":["https://github.com/mitre/chef-stig-windows-2012-v2r12-memberserver-hardening"],
-      "readme":["https://github.com/mitre/microsoft-windows-2012r2-memberserver-stig-baseline/blob/master/README.md"] 
+      "sections": "Operating Systems",
+      "github":"https://github.com/mitre/microsoft-windows-2012r2-memberserver-stig-baseline",
+      "chef":"https://github.com/mitre/chef-stig-windows-2012-v2r12-memberserver-hardening"
     },
     {
       "name": "Windows 2016 STIG",
       "route": "stig-microsoft-windows-server-2016-v1r4-baseline/",
       "path": "/Baselines/stig-microsoft-windows-server-2016-v1r4-baseline.html",
-      "sections": ["Operating Systems"],
-      "github":["https://github.com/mitre/stig-microsoft-windows-server-2016-v1r4-baseline"],
-      "chef_hardening":["https://github.com/mitre/chef-stig-windows-server-2016-v1r4-hardening"],
-      "readme":["https://github.com/mitre/stig-microsoft-windows-server-2016-v1r4-baseline/blob/master/README.md"] 
+      "sections": "Operating Systems",
+      "github":"https://github.com/mitre/stig-microsoft-windows-server-2016-v1r4-baseline",
+      "chef":"https://github.com/mitre/chef-stig-windows-server-2016-v1r4-hardening"
     },
     {
       "name": "Ubuntu 16.04 STIG",
       "route": "stig-canonical-ubuntu-16.04-lts-baseline/",
       "path": "/Baselines/stig-canonical-ubuntu-16.04-lts-baseline.html",
-      "sections": ["Operating Systems"],
-      "github": "https://github.com/mitre/canonical-ubuntu-16.04-lts-stig-baseline",
-      "readme": "https://github.com/mitre/canonical-ubuntu-16.04-lts-stig-baseline/blob/master/README.md"
+      "sections": "Operating Systems",
+      "github": "https://github.com/mitre/canonical-ubuntu-16.04-lts-stig-baseline"
       
     },
     {
       "name": "AWS CIS Foundations",
       "route": "cis-aws-foundations-baseline/",
       "path": "/Baselines/cis-aws-foundations-baseline.html",
-      "sections": ["Network Components"],
-      "github":["https://github.com/mitre/cis-aws-foundations-baseline"],
-      "terraform":["https://github.com/mitre/cis-aws-foundations-hardening"],
-      "readme":["https://github.com/mitre/cis-aws-foundations-baseline/blob/master/README.md"] 
+      "sections": "Network Components",
+      "github":"https://github.com/mitre/cis-aws-foundations-baseline",
+      "terraform":"https://github.com/mitre/cis-aws-foundations-hardening"
 
     },
     {
       "name": "AWS RDS Infrastructure Baseline",
       "route": "cis-aws-rds-infrastructure-baseline/",
       "path": "/Baselines/cis-aws-rds-infrastructure-baseline.html",
-      "sections": ["Cloud Services"],
-      "github": "https://github.com/mitre/aws-rds-infrastructure-cis-baseline",
-      "readme": "https://github.com/mitre/aws-rds-infrastructure-cis-baseline/blob/master/README.md"
+      "sections": "Cloud Services",
+      "github": "https://github.com/mitre/aws-rds-infrastructure-cis-baseline"
     },
     {
       "name": "AWS S3",
       "route": "aws-s3-baseline/",
       "path": "/Baselines/aws-s3-baseline.html",
-      "sections": ["Cloud Services"],
-      "github": "https://github.com/mitre/aws-s3-baseline",
-      "readme": "https://github.com/mitre/aws-s3-baseline/blob/master/README.md"
+      "sections": "Cloud Services",
+      "github": "https://github.com/mitre/aws-s3-baseline"
     }
   ],
   "sections": [
