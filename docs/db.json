@@ -84,8 +84,8 @@
     },
     {
       "name": "MySQL (AWS RDS)",
-      "route": "cis-aws-rds-mysql-server-enterprise-v5.7-baseline/",
-      "path": "/Baselines/cis-aws-rds-mysql-server-enterprise-v5.7-baseline.html",
+      "route": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline.html",
+      "path": "/Baselines/aws-rds-oracle-mysql-ee-5.7-cis-baseline.html",
       "sections": "Database",
       "github": "https://github.com/mitre/aws-rds-oracle-mysql-ee-5.7-cis-baseline"
     },
