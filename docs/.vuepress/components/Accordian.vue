@@ -5,7 +5,6 @@
   v-for="base in baselines"
    v-if="base.path === path  && base.github !==undefined"
    :name="base.name"
-   :route="base.route"
    target :href="{url: base.github}">
   Github
   </vs-button>
@@ -14,7 +13,6 @@
   v-for="base in baselines"
    v-if="base.path === path && base.chef !==undefined"
    :name="base.name"
-   :route="base.route"
    target :href="{url: base.chef}">
     Chef Remediation Cookbook
   </vs-button>
@@ -23,7 +21,6 @@
   v-for="base in baselines"
    v-if="base.path === path && base.ansible !==undefined"
    :name="base.name"
-   :route="base.route"
    target :href="{url: base.ansible}">
     Ansible Remediation Role
   </vs-button>
@@ -32,7 +29,6 @@
   v-for="base in baselines"
    v-if="base.path === path && base.terraform !==undefined"
    :name="base.name"
-   :route="base.route"
    target :href="{url: base.terraform}">
     Terraform Remediation
   </vs-button>
@@ -41,7 +37,6 @@
   v-for="base in baselines"
    v-if="base.path === path && base.readme !==undefined"
    :name="base.name"
-   :route="base.route"
    target :href="{url: base.readme}">
     README
   </vs-button>
