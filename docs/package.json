@@ -13,6 +13,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
+    "docs:build": "vuepress build",
     "serve": "node --version",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
